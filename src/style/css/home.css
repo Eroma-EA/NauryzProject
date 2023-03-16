@@ -1,0 +1,55 @@
+/* Welcome Page */
+.home_welcome {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+}
+.home_welcome img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.home_welcome > h1 {
+  position: relative;
+  font-family: "Lobster", cursive;
+  font-size: 150px;
+  color: rgb(255, 251, 0);
+  text-shadow: 0px 0px 5px black;
+}
+.home_welcome > h1 > img {
+  position: absolute;
+  top: -240px;
+  left: -200px;
+}
+/* Container Div */
+
+.home_des {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.home_des > img {
+  width: 50%;
+  height: 400px;
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.home_des > .des_text {
+  padding: 5px;
+  border-radius: 15px;
+  width: 500px;
+  height: min-content;
+  box-shadow: 0px 0px 5px 0px;
+}
+.home_des > .des_text > p {
+  font-size: larger;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.549);
+  padding: 5px;
+  text-align: center;
+}
