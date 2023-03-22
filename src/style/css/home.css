@@ -1,24 +1,25 @@
 /* Welcome Page */
 .home_welcome {
   display: flex;
+  flex-direction: column;
   position: relative;
-  height: 100vh;
   padding: 100px;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  transition: 0.7s;
+  transition: 0.5s ease-out;
 }
-.home_welcome img {
+.home_welcome .butterfly {
+  z-index: 0;
   position: absolute;
-  right: 0;
+  right: 100px;
   top: 0;
 }
 .home_welcome > h1 {
   position: relative;
-  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  font-family: "Great Vibes", cursive;
   font-size: 150px;
-  color: rgb(255, 251, 0);
-  text-shadow: 0px 0px 5px black;
+  color: rgb(96, 144, 0);
 }
 .home_welcome > h1 > img {
   position: absolute;
@@ -29,27 +30,69 @@
 
 .home_des {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.des_in {
+  transition: all 0.5s ease-out;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  opacity: 0;
 }
-.home_des > img {
-  width: 50%;
+.active {
+  opacity: 1;
+}
+.home_des > .des_in > img {
+  transition: all 0.5s ease-out;
+  transform: translateX(-300px) translateY(100px);
+
+  width: 49%;
   height: 400px;
-  box-shadow: 0px 0px 5px 0px;
   border-radius: 15px;
-  padding: 10px;
 }
-.home_des > .des_text {
+.home_des > .des_in > .img_active {
+  transform: translateX(0) translateY(0px);
+}
+.home_des > .des_in > .des_text {
+  transition: all 0.5s ease-out;
+  transform: translateX(300px) translateY(100px);
   padding: 5px;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
   width: 500px;
-  height: min-content;
-  box-shadow: 0px 0px 5px 0px;
+  height: auto;
+  width: 49%;
 }
-.home_des > .des_text > p {
-  font-size: larger;
+.home_des > .des_in > .text_active {
+  transform: translateX(0) translateX(0);
+}
+.home_des > .des_in > .des_text > p {
+  width: 100%;
+  font-size: 20px;
+  text-align: justify;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.549);
+
   padding: 5px;
-  text-align: center;
+}
+
+.home_des > .des_in > .Aqin {
+  width: 150px;
+  height: 200px;
+}
+
+/* Tolyq oqu */
+.tolyq{
+  border: 1px solid green;
+  padding: 0 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: rgba(0, 159, 8, 0.203);
+  color: rgb(0, 0, 0);
+}
+
+.home_img{
+  height: 300px;
 }

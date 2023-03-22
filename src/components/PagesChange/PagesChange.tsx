@@ -1,7 +1,7 @@
 import React from "react";
 import { Home } from "../Home/Home";
 import { Gallery } from "../Gallery/Gallery";
-
+import { Contacts } from "../Contacts/Contacts";
 function PagesChange() {
   const url: string = window.location.href;
   if (url.includes("Home")) {
@@ -10,10 +10,21 @@ function PagesChange() {
         <Home />
       </>
     );
-  } else if (url.includes("Gallery")) {
+  } else if (
+    url.includes("Gallery") ||
+    url.includes("Photo") ||
+    url.includes("Tagam") ||
+    url.includes("Oyin")
+  ) {
     return (
       <>
         <Gallery />
+      </>
+    );
+  } else if (url.includes("Contacts")) {
+    return (
+      <>
+        <Contacts />
       </>
     );
   } else {
@@ -26,35 +37,3 @@ function PagesChange() {
 }
 
 export default PagesChange;
-
-// export const PagesChange = () => {
-//   const Pages: string[] = [`Home`, `Gallery`];
-//   const importPage = [Home, Gallery];
-//   const url: string = window.location.href;
-//   return (
-//     <>
-//       {Pages.map((Page) => {
-//         if (url.includes(Page)) {
-//           const i: number = Pages.indexOf(Page);
-//           return `<${importPage[i]} />`;
-//         } else {
-//           return `<${importPage[0]} />`;
-//         }
-//       })}
-//     </>
-//   );
-
-// return (
-//   <>
-
-//     {/* {Pages.map((Page) => {
-//       if (url.includes(Page)) {
-//         const i: number = Pages.indexOf(Page);
-//         return `<${importPage[i]} />`;
-//       } else {
-//         return `<${importPage[0]} />`;
-//       }
-//     })} */}
-//   </>
-// );
-// };

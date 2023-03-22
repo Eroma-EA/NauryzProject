@@ -1,13 +1,11 @@
 import React from "react";
-import { Navbar } from "../Header/Navbar";
-import PagesChange from "../PagesChange/PagesChange";
+import { Pages } from "../pages/Pages";
 
 // import { scrollAnimation } from "../scrollAnimation/scrollAnimation";
 function App() {
   return (
     <>
-      <Navbar />
-      <PagesChange />
+      <Pages />
     </>
   );
 }
